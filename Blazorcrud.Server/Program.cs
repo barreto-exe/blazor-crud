@@ -15,7 +15,7 @@ builder.Services.AddRazorPages();
 //builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlite("Filename=./BlazorServerCRUD.sqlite"));
 
 //Use sql server
-builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer("Server=localhost,1433;Database=Test;User=sa;Password=yourStrong!Password123;TrustServerCertificate=true;"));
+builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer("Server=sqldb,1433;Database=Blazor;User=sa;Password=yourStrong!Password123;TrustServerCertificate=true;"));
 
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddScoped<IUploadRepository, UploadRepository>();

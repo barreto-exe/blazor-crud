@@ -1,6 +1,6 @@
 services:
   blazorcrud:
-    image: thbst16/blazor-crud
+    image: blazor-crud
     build: .
     ports:
         - 8080:80
