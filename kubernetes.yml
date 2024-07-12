@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blazor-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: blazor-app
+  template:
+    metadata:
+      labels:
+        app: blazor-app
+    spec:
+      containers:
+        - name: blazor-container
+          image: blazor-crud
+          ports:
+            - containerPort: 80

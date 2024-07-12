@@ -1,12 +1,12 @@
 services:
   blazorcrud:
-    image: blazor-crud
+    image: barretoexe/blazor-crud
     build: .
     ports:
         - 8080:80
 
   sqldb: 
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image: barretoexe/sqldb
     ports:
       - 1433:1433
     environment:
